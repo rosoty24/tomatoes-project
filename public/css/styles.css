@@ -200,6 +200,11 @@ nav h1 {
   color:#fcdb21;
 }
 
+.img-circle {
+    border-radius: 50%;
+    width: 40%;
+}
+
 /*.main-nav ul.nav > li:nth-child(1) > a {
   border-color:#55acee
 }
