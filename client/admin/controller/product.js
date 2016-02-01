@@ -72,6 +72,8 @@ Template.updateProduct.events({
 		var currentImage = $("#current").val();
 		var description = $('#description').val();
 		var category =$('#category').val();
+		var recommend =$('#recommend').val();
+		alert("My recommend:"+recommend);
 		var date = new Date();
 		if(typeof img == "undefined")
 			img = currentImage;
@@ -85,6 +87,7 @@ Template.updateProduct.events({
 			img:img,
 			author:author,
 			category:category,
+			recommend:recommend,
 			date:date,
 			status:0
 		}
@@ -132,7 +135,7 @@ Template.allproduct.events({
 });
 Template.allproduct.helpers({
 	getAllProduct:function(){
-		return products.find();
+		return data.find();
 	},
 	getCategory:function(){
 		var id = this.category;
