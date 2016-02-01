@@ -1,0 +1,101 @@
+<template name="editprofileAuthor">
+	<div class="container">
+		<div class="row">
+			<h1>EditProfile</h1>
+		    <div class="col-lg-12 col-xs-12">
+		      	<div class="well panel panel-default">
+		        	<div class="panel-body">
+		          		<div class="row">
+				            <div class="col-xs-12 col-sm-4 text-center">
+					            <img src="/uploads/{{getprofile}}" alt="" class="center-block img-circle img-thumbnail img-responsive">
+					              <ul class="list-inline ratings text-center" title="Ratings">
+					                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+					                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+					                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+					                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+					                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+					            </ul>
+					            <input type="file" id="upload">
+				            </div>
+				            <!--/col-->
+				            <div class="table-responsive">
+								<table class="table" style="width:450px;">
+									<tbody>
+									<div class="col-xs-12 col-md-8 col-lg-12 form-group">
+										<label>Firstname:</label>
+										<input class="form-control" id="firstname" value="{{profile.firstname}}">
+										<p class=""></p>
+									</div>
+									<div class="col-xs-12 col-md-8 col-lg-12 form-group">
+										<label>Lastname:</label>
+										<input class="form-control" id="lastname" value="{{profile.lastname}}">
+										<p class=""></p>
+									</div>
+									<div class="col-xs-12 col-md-8 col-lg-12 form-group">
+										<label>About:</label>
+										<input class="form-control" id="about" value="{{profile.about}}">
+										<p class=""></p>
+									</div>
+									<div class="col-xs-12 col-md-8 col-lg-12 form-group">
+										<label>Hobbies:</label>
+										<input class="form-control" id="hobbies" value="{{profile.hobbies}}">
+										<p class=""></p>
+									</div>
+									<div class="col-xs-12 col-md-8 col-lg-12 form-group">
+										<label>Skills:</label>
+										<input class="form-control" id="skills" value="{{profile.skills}}">
+										<p class=""></p>
+									</div>
+									<div class="col-md-10 col-md-offset-3">
+						  				<button id="updateAuthor" class="btn_login pull-left row updateAuthor">Edit</button>
+									</div>
+									</tbody>
+								</table>
+							</div>
+							
+				            <!-- <div class="col-xs-12 col-sm-8">
+				            	{{#with getAuthorProfile author}}
+					              <h2>{{profile.firstname}} {{profile.lastname}}</h2>
+					              <p><strong>About: </strong> Web Designer / UI Expert. </p>
+					              <p><strong>Hobbies: </strong> Read, out with friends, listen to music, draw and learn new things. </p>
+					              <p><strong>Skills: </strong>
+					                <span class="label label-info tags">html5</span> 
+					                <span class="label label-info tags">css3</span>
+					                <span class="label label-info tags">jquery</span>
+					                <span class="label label-info tags">bootstrap3</span>
+					              </p>
+					             {{/with}}
+				            </div> -->
+				            <!--/col-->          
+			            	<div class="clearfix"></div>
+				            <div class="col-xs-12 col-sm-4">
+				              <h2><strong> 20,7K </strong></h2>
+				              <p><small>Followers</small></p>
+				              <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
+				            </div>
+			            	<!--/col-->
+				            <div class="col-xs-12 col-sm-4">
+				              <h2><strong>245</strong></h2>
+				              <p><small>Following</small></p>
+				              <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>
+				            </div>
+			            	<!--/col-->
+				            <div class="col-xs-12 col-sm-4">
+				              <h2><strong>43</strong></h2>
+				              <p><small>Snippets</small></p>
+				              <button type="button" class="btn btn-primary btn-block"><span class="fa fa-gear"></span> Options </button>  
+				            </div>
+			            	<!--/col-->
+		          		</div>
+		          		<!--/row-->
+		        	</div>
+		        <!--/panel-body-->
+		      	</div>
+		      <!--/panel-->
+		    </div>
+	    	<!--/col--> 
+	  	</div>
+	  	<!--/row--> 
+	</div>
+	<!--/container-->
+</template>

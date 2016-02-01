@@ -1,0 +1,21 @@
+<template name="searchBox">
+     <div class="container">
+    <section style="padding-top:200px;">
+        <div class="container">
+           <div class="top-heading">
+            </div>
+                    {{#esEach index="post"}}
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="{{url}}">{{title}}</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                   
+                    {{/esEach}}
+
+            </div>
+    </section>
+    </div>
+</template>

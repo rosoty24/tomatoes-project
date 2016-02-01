@@ -1,0 +1,35 @@
+<template name="manageCategory">
+    <div class="container con-body">
+        <div class="row">
+            {{> adminmenu}}
+            <div class="col-lg-9">
+                    <div class="dataTable_wrapper table-responsive">
+                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                                <tr style="background:#ddd">
+                                    <th id="text-color">#</th>
+                                    <th id="text-color">Images</th>
+                                    <th id="text-color">Titile</th>
+                                    <th width="25%" id="text-color">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each manageCat}}
+                                     <tr class="odd gradeX">
+                                        <td class="text-center">#</td>
+                                        <td class="text-center"><img src="/uploads/{{getImage image}}" width="80" class="img-responsive"></td>
+                                        <td class="text-center">{{title}}</td>
+                                        <td class="text-center">
+                                            <a href="#" class="btn btn-primary btn-xs">View</a>
+                                            <a href="#" id="remove" class="btn btn-danger btn-xs">Delete</a>
+                                            <a href="/admin/updateCategory/{{_id}}" class="btn btn-primary btn-xs">Edit</a>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+    </div>
+</template>

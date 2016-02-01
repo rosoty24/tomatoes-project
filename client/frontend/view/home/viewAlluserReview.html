@@ -1,0 +1,25 @@
+<template name="Allreviewuser">
+		{{> leftside}}
+		<div class="content-a">
+			   <h1 class="margin-bottom h1-bold">PROFESSIONAL CRITICS : INCARNATA D’ANATOLE LEBRETO .......</h1>
+			<div class="row space-top-fragrand">
+			    {{#each getuserReview}}
+					<div class="col-md-6">
+					<!-- show comment -->
+						<div class="show-comment"> 
+							<p class="text-comment">{{text}}</p>	
+							<p>{{date}}</p>	
+						</div>
+						<!-- end show comment -->
+						<div style="float:left">
+							<img src="/images/cycle.png" class="img-cycle responsive">
+						</div>
+						<div style="float:left">
+							<p class="text-name">{{getUsernameReview author}} </p>
+							<span class="color-text"> {{websiteName}}</span>
+						</div>
+					</div> 
+				{{/each}}
+			</div>
+		</div>
+</template>

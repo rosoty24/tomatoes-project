@@ -1,0 +1,32 @@
+<template name="disProduct">
+	<div class="container">
+        <hr>
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Latest Features</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            {{#each displayPro}}
+                <div class="col-md-3 col-sm-6 hero-feature">
+                    <div class="thumbnail">
+                        <a href="/productDetail/{{_id}}">
+                        <img src="/uploads/{{getImage img}}" height="100" alt="Place image"></a>
+                        <div class="caption">
+                            <h3>{{title}}</h3>
+                            <div class="desc-size">
+                                <p>{{description}}</p>
+                            </div>
+                            <p>
+                                <p>{{getFavorite _id}}</p>
+                                <a href="#" id="like_{{_id}}" class="btn btn-primary like">Like</a>
+                                <a href="#" id="unlike_{{_id}}" class="btn btn-primary unlike hidden">Unlike</a> 
+                                <a href="#" class="btn btn-default">More Info</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+</template>

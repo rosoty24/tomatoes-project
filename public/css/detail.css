@@ -1,0 +1,211 @@
+/* detail Pages */
+
+.space-detail{
+    margin-bottom: 30px;
+}
+.space-detail-a{
+    margin-bottom: 50px;
+}
+.space-tag{
+    margin-bottom: 10px;
+}
+.pull-right h2{
+    margin-bottom: 20px;
+}
+.btn_login {
+    -moz-user-select: none;
+    background: #333333;
+    border: 0px none;
+    border-radius: 0px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 1em;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-weight: 700;
+    padding: 3px 1px;
+    text-align: center;
+    color: #fff;
+}
+.btn_login_a {
+    -moz-user-select: none;
+    background: #333 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 1.42857;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    padding: 4px 16px;
+    text-align: center;
+}
+.space-top-detail{
+    margin-top: 30px;
+}
+.space-icon{
+    margin-top:10px;
+}
+.progress {
+    background-color: #fff;
+    border-radius: 0;
+    box-shadow:none;
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.progress-bar {
+    background-color: #ffe5dc;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-a {
+    background-color: #ffc7da;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-b {
+    background-color: #c1d7e9;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-c {
+    background-color: #7fe4f5;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-d {
+    background-color: #d5efca;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-e {
+    background-color: #d5efca;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-f {
+    background-color: #ffcccc;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-g {
+    background-color: #ffdec6;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-h {
+    background-color: #ffe6a9;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.progress-bar-i {
+    background-color: #7fb5d0;
+    box-shadow: none;
+    color: #000;
+    float: left;
+    font-size: 14px;
+    font-family:Georgia,"Times New Roman",Times,serif;
+    height: 100%;
+    line-height: 25px;
+    text-align: center;
+    transition: width 0.6s ease 0s;
+    width: 0;
+}
+.bg-detail{
+    height: 100px;
+    background: #fffad9;
+    padding: 15px 20px 15px 20px;
+}
+.bg-drag{
+    height: 240px;
+    background: #fff3f3;
+    padding: 25px 15px 25px 15px;
+}
+.h1-big{
+    font-size: 21px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+

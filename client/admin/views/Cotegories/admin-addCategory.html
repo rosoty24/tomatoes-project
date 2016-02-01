@@ -1,0 +1,31 @@
+<template name="categories">
+	<div class="container con-body">
+		<div class="row">
+			{{> adminmenu}}
+			<div class="col-lg-9">
+					<p>
+                        <button type="button" class="btn btn-default">Default</button>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-link">Link</button>
+                    </p>
+					<form role="form">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input class="form-control" id="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label>File input</label>
+                            <input type="file" id="img" class="form-control" required>
+                        </div>
+                        <div class="row pull-right">
+                            <button type="submit" id="submit" class="btn btn-primary">Add</button>
+                        </div>
+                    </form>
+				</div>
+		</div>
+	</div>
+</template>

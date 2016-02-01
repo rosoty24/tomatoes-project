@@ -1,0 +1,128 @@
+<template name="productdetails">
+    <div class="container con-body">
+        <div class="row">
+        
+            <div class="col-lg-8">
+                <div class="span5">
+                    <img src="/uploads/{{getImage}}" class="img-responsive">
+                    
+                </div>
+                    <p>
+                    <p>{{getFavorite}}</p>
+                        <a href="#" id="like" class="btn btn-primary like">Like</a>
+                        <a href="#" id="unlike" class="btn btn-primary unlike hidden">Unlike</a> 
+                    </p>
+
+            </div>
+            <div class="col-lg-4">
+                <div class="span7">
+                    <h2>{{title}}</h2>
+                    <h4 class="muted"></h4>
+                    <p>{{description}}</p>
+                    <hr>
+                    <h3>Price - <del class="text-error">${{price}}</del> ${{price}}</h3>
+                    <p class="muted"></p>
+                    <br>
+                    <p><a href="#" class="btn btn-success btn-large">Buy Online Now</a></p>
+                </div>
+                <div class="form-group">
+                    <textarea type="text" class="form-control input-sm" id="comment" placeholder="comment..." required rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="button" id="submit" class="btn btn-primary">Add Review</button>
+                </div>
+                <!-- <div class="form-group">
+                    <h2>MAIN ACCORDS</h2>
+                    {{#each getPostCom}}
+                        {{#each array}}
+                        <div>{{number}}</div>
+                        {{/each}}
+                    {{/each}}
+                </div> -->
+                <div class="form-group" >
+                <div class="form-group">
+                    <h2>MAIN ACCORDS</h2>
+                    {{#each getAccord}}
+                        {{#each accords}}
+                        <div>{{name}}</div>
+                        {{/each}}
+                    {{/each}}
+                </div>
+            </div>
+        </div><br/><br/><br/>
+                <button type="button" class="btn btn-primary" id="love">Love</button>
+                <button type="button" class="btn btn-success" id="like">Like</button>
+                <button type="button" class="btn btn-info" id="dislike">Dislike</button>
+                <button type="button" class="btn btn-warning" id="winter">Winter</button>
+                <button type="button" class="btn btn-danger" id="spring">Spring</button>
+                <button type="button" class="btn btn-success" id="summer">Summer</button>
+                <button type="button" class="btn btn-info" id="fall">Fall</button>
+                <button type="button" class="btn btn-warning" id="day">Day</button>
+                <button type="button" class="btn btn-danger" id="night">Night</button>
+        <div class="clearfix"></div>
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-8">
+                <h4>Perform</h4>
+                {{#each getPerform}}
+                    {{#with perfume_pyramid}}
+                        {{#each top_notes}}
+                            <div class="col-sm-4">
+                                <h4>{{name}}</h4>
+                                <img src="{{url}}" width="50" class="img-responsive">
+                            </div><br/>
+                        {{/each}}
+                        <h4>Middle Notes</h4>
+                        {{#each middle_notes}}
+                            <div class="col-sm-4">
+                                <h4>{{name}}</h4>
+                                <img src="{{url}}" width="50" class="img-responsive">
+                            </div><br/>
+                        {{/each}}
+                        <h4>Base Notes</h4>
+                        {{#each base_notes}}
+                            <div class="col-sm-4">
+                                <h4>{{name}}</h4>
+                                <img src="{{url}}" width="50" class="img-responsive">
+                            </div><br/>
+                        {{/each}}
+                    {{/with}}
+                {{/each}}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <h2>Comment</h2>
+            <div class="col-sm-12"><br/>
+                {{#each comments}}
+                    <div class="col-md-3 col-sm-6 col-xs-12">  
+                        <div class="panel panel-default">
+                            <div class="panel-heading">{{getUserReview userId}}
+                            <p class="pull-right">{{date}}</p>
+                            </div>
+                            <div class="panel-body">{{text}}</div>
+                        </div>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="row">
+            <h2>Review</h2>
+            {{#each getReview}}
+                  <div class="col-md-3 col-sm-6 col-xs-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <span>{{getUserReview userId}}</span> 
+                                <span style="float:right;">{{date}}</span>
+                            </div>
+                            <div class="panel-body">
+                                <h5>{{text}}</h5>
+                            </div>
+                        </div>
+                  </div>
+            {{/each}}
+        </div>
+        </div>
+    </div>
+</template>

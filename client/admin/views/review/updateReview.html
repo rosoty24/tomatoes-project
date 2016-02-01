@@ -1,0 +1,51 @@
+<template name = "updateReview">
+	<div class="container con-body">
+		<div class="row">
+			{{> adminmenu}}
+			<div class="col-lg-9">
+				<div class="row">
+					<form role="form">
+						
+	                        <div class="form-group">
+	                        	<label>Text</label>
+								<textarea ame="text" id="text" class="form-control input-sm" placeholder="Text" required rows="5">{{text}}</textarea>
+	                        </div>
+	                        <div class="form-group">
+	                            <label>Author</label>
+	                            <input type="text" id="author" class="form-control input-sm" placeholder="Author" required value="{{author}}" >
+	                        </div>
+	                        <div class="form-group">
+	                            <label>Image</label>
+	                            <input type="file" id="image">
+	                            <input type="text" id="currentImage">
+	                        </div>
+	                        <div class="form-group">
+	                            <label>Select Type</label>
+	                            <select class="form-control" id="type" required>
+									<option value="{{type}}" style="display:none">{{type}}</option>
+									<option value="professional" >Professional</option>
+									<option value="user" >User</option>
+								 </select>
+	                        </div>
+	                        <div class="form-group">
+	                            <label>Score</label>
+	                            <input type="text" id="score" class="form-control input-sm" placeholder="Score" required value="{{score}}" >
+	                        </div>
+	                        <div class="form-group">
+	                            <label>Url</label>
+	                            <input type="text" id="url" class="form-control input-sm" placeholder="Url" required value="{{url}}" >
+	                        </div>
+	                        <div class="form-group">
+	                            <label>WebsiteName</label>
+	                            <input type="text" id="websitename" class="form-control input-sm" placeholder="Websitename" required value="{{websiteName}}" >
+	                        </div>
+	                        <div class="row pull-right">
+	                            <button type="submit" id="update" class="btn btn-primary">Update Data</button>
+	                        </div>
+	                    
+                    </form>
+                </div>
+			</div>
+		</div>
+	</div>
+</template>

@@ -1,0 +1,18 @@
+<template name="mainLayout">
+	{{> header}}
+	<section class="stretch">
+		<div class="container">
+			{{#if checkslider}}
+				{{> slider}}
+			{{/if}}
+			<!-- wrapper -->
+			<div class="wrapper">
+				<div class="col-md-12">
+					<!-- {{> leftside}} -->
+  					{{> yield}}
+  				</div>
+			</div>
+			<!-- end wrapper-->
+		</div>
+	</section>
+</template >

@@ -1,0 +1,90 @@
+/* Fragrand Pages */
+
+.wrapper-fragrand{
+	background: #fffad9;
+	height: 200px;
+}
+
+.border-left{
+	border-left: 3px solid #000;
+	height: 200px;
+}
+.content-a {
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.wrapper-in{
+	padding: 10px 10px 10px 10px
+}
+.h1-bold{
+	font-weight: 700;
+	margin-bottom: 20px;
+}
+.lg-span{
+	font-size: 30px;
+}
+.space-top-fragrand{
+	margin-top: 30px;
+}
+.space-top-fragrand-a{
+    margin-top: 30px;
+   margin-bottom: 30px;
+}
+
+.space-top-star{
+	margin-top: 10px;
+	text-align: right;
+}
+.clear-fix{
+	clear: both;
+}
+.color-a{
+	color: #777273;
+}
+textarea.form-control-fragrand {
+    height: auto;
+}
+.form-control-fragrand {
+    background-color: #fffad9;
+    background-image: none;
+    border: 0 solid #fff;
+    border-radius: 0;
+    box-shadow: none;
+    color: #555;
+    display: block;
+    font-size: 14px;
+    height: 34px;
+    line-height: 1.42857;
+    padding: 6px 12px;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    width: 100%;
+}
+.space-comment{
+    padding-top: 30px;
+}
+.img-cycle{
+    margin-top: -30px;
+    padding-left: 10px;
+}
+.text-fra{
+    text-decoration:underline;
+    margin-bottom: 40px;
+}
+.space-nothing{
+    margin-bottom: 100px;
+}
+.text-name{
+    margin: 0px;
+    padding: 0px;
+}
+.color-text{
+    color: #868786;
+}
+.show-comment{
+    height: 100px;
+    background: #fffad9;
+}
+
+
+
+

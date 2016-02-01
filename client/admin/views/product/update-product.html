@@ -1,0 +1,53 @@
+<template name="updateProduct">
+	<div class="container con-body">
+		<div class="row">
+			{{> adminmenu}}
+			<div class="col-lg-9">
+					<p>
+                        <button type="button" class="btn btn-default">Default</button>
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-link">Link</button>
+                    </p>
+					<form role="form">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="title" value="{{title}}" name="title" id="title" class="form-control input-sm" placeholder="Title" required>
+                        </div>
+                        <div class="form-group">
+							<textarea rows="5" name="text" id="description" class="form-control input-sm" placeholder="Desription">{{description}}</textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="text" id="price" class="form-control input-sm" placeholder="Price" required  value="{{price}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Stock</label>
+                            <input type="text" id="stock" class="form-control input-sm" placeholder="Stock" required value="{{stock}}">
+                        </div>
+                        <div class="form-group">
+                            <label>Add Select</label>
+                           <select class="form-control" id="category" required>
+								<option style="display:none;" value="{{category}}">		{{getCat category}}
+								</option>
+								{{#each getCategory}}
+									<option value="{{_id}}">{{title}}</option>
+								{{/each}}
+							</select>
+                        </div>
+                        <div class="form-group">
+                            <label>File input</label>
+                            <input type="file" id="img" class="form-control" required>
+                            <input type="hidden" id="current" value="{{img}}">
+                        </div>
+                        <div class="row pull-right">
+                            <input  value="Update" id="btnUpdate" class="btn btn-info btn-block">
+                        </div>
+                    </form>
+				</div>
+		</div>
+	</div>
+</template>

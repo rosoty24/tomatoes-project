@@ -1,0 +1,64 @@
+<template name="dfgsdfgs">
+ 	<div id="wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Manage Submit
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li class="active">
+                                <i class="fa fa-dashboard"></i> Dashboard
+                            </li>
+                        </ol>
+                    </div>
+					<div class="col-xs-12 col-sm-6 col-md-12">
+						<a href="/submit"><button class="btn btn-primary">Add New</button></a>
+						<br>
+						<br>
+
+ 						<!--  <ul class="nav nav-tabs">
+    					<li class="active"><a href="/managecontent">All</a></li>
+    					<li><a href="/showwebzine">News</a></li>
+    					<li><a href="/showtuto">Education</a></li>
+    					<li><a href="/showlooks">Website</a></li>
+  						</ul>
+
+						<br>
+						<br> -->
+
+						<div class="table-responsive">
+							<table class="table table-bordered table-hover table-striped">
+								<thead>
+									<tr>
+										<th class="text-center" style="width:35%">Title</th>
+										<th class="text-center" style="width:10%">URL</th>
+										<th class="text-center" style="width:15%">Text</th>
+										<!-- <th class="text-center" style="width:15%">Date</th> -->
+										<th class="text-center" style="width:15%">Category</th>
+										<th class="text-center" style="width:15%" colspan="4">Tools</th>
+									</tr>
+								</thead>
+								<tbody>
+								
+									{{#each getAllProduct}}
+									<tr>
+										<td>{{title}}</td>
+										<td>{{url}}</td>
+										<td>{{{text}}}</td>
+										<!-- <td>{{{date}}}</td> -->
+										<td>{{getCategory}}</td>
+										<td><a class="glyphicon glyphicon-trash center-block" href="" id="remove"></a></td>
+										<td><a class="glyphicon glyphicon-edit center-block" href="updatesubmit/{{_id}}"></a></td>
+									</tr>
+									{{/each}}
+								</tbody>
+							</table>
+						</div>
+					</div>
+                </div>
+            </div>
+            <!-- /.container-fluid -->
+    </div>
+    <!-- /#wrapper -->
+</template>

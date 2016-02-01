@@ -1,0 +1,11 @@
+//Meteor.subscribe("images");
+Meteor.subscribe('users');
+Meteor.subscribe("products");
+Meteor.subscribe("images");
+Meteor.subscribe("category");
+Meteor.subscribe("advertise");
+Meteor.subscribe("favorite");
+Meteor.subscribe("review");
+Meteor.subscribe("feeling");
+Meteor.subscribe("data");
+Meteor.subscribe("score");

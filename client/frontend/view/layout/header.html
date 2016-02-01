@@ -1,0 +1,57 @@
+<template name="header">
+	<nav>
+        <div class="container-fluid">
+            <div class="nav-top clearfix">        
+                <div class="logo hidden-xs">
+                    <section class="topnav">
+                        <div class="col-md-3">
+                            <ul class="social-network social-circle">
+                                <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                                <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="text-center">THE FIRST BEAUTY REVIEW AGGREGATOR</h4>
+                        </div>
+                        <div class="col-md-3">
+                            <h4 class="text-right"><i class="fa fa-search"></i></h4>
+                            {{#if currentUser}}
+                                <a href="#" class="pull-right" id="logout">Logout</a>
+                            {{else}}
+                                <a href="/login" class="pull-right">Login</a>
+                            {{/if}}
+                        </div>
+                    </section>
+                    <div class="logo">
+                        <h1 class="text-center hidden-xs"><a href="index.html"><img src="/images/logo_lg.png"></a></h1>
+                    </div>
+                </div>
+                <div class="logo-responsive hidden-lg hidden-sm hidden-md">
+                    <a href="index.html"><img src="/images/small_xs.png"></a>
+                </div>
+                <button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button"><span class="sr-only">Toggle navigation</span><i class="fa fa-bars"></i></button>
+            </div>
+        </div>
+        <!-- end nav top -->
+        
+        <div class="main-nav navbar-collapse collapse">
+            <div class="container">
+                <div class="minilogo">
+                    <h1><a href="index.html"><img src="/images/small_xs.png"></a></h1>
+                </div>
+                <ul class="nav nav-justified">
+                    <li><a href="/">Home</a></li>
+                    {{#each getCatename}}
+                        <li><a href="/listdatabycat/{{_id}}"> {{title}}</a></li>
+                    {{/each}}
+                </ul>
+                <!--<div class="minisearch">
+                    <h1><a href="index.html"><i class="fa fa-search"></i></h1>
+                </div> -->
+            </div>
+        </div>
+    </nav>
+</template>
