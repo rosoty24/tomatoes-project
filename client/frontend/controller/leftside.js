@@ -18,6 +18,9 @@ Template.leftside.helpers({
         	return false;
         }
     },
+    getdata:function(){
+      return data.find({status:1});
+    },
     getreview:function(){
         arr=[];
         function onlyUnique(value, index, self) { 
@@ -43,6 +46,23 @@ Template.leftside.helpers({
          
     },
     coloraverage:function(id){
+        var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
+        var countreview = review.find({id_product:id,type:"professional"}).count();
+        var result = (Number(positive)/Number(countreview))*100;
+        if(result<60){
+            return "color-orange";
+        }else{
+            return "color-green";
+        }
+    },
+    getData:function(){
+        var category = categories.findOne({title:"Perfume"});
+        console.log("Hello "+category._id);
+        var catId = category._id;
+        var result = data.find({category:catId});
+         return result;
+    },
+    coloraverage2:function(id){
         var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
         var countreview = review.find({id_product:id,type:"professional"}).count();
         var result = (Number(positive)/Number(countreview))*100;
