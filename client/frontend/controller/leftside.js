@@ -32,12 +32,15 @@ Template.leftside.helpers({
         return unique;
     },
     getAverage:function(id){
-            var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
-          console.log("POSSIVE IS: "+positive);
-          var countreview = review.find({id_product:id,type:"professional"}).count();
-          var result = (Number(positive)/Number(countreview))*100;
-            result = (result.toString()).replace(/(\d+)(\.)(.*)/gi,'$1');
-          return result;   
+        var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
+        console.log("POSSIVE IS: "+positive);
+        var countreview = review.find({id_product:id,type:"professional"}).count();
+        var result = (Number(positive)/Number(countreview))*100;
+        result = (result.toString()).replace(/(\d+)(\.)(.*)/gi,'$1');
+        average = new Array(result);
+        console.log("RESULT IS :"+average);
+        return result;  
+         
     },
     coloraverage:function(id){
         var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
