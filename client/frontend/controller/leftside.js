@@ -30,9 +30,7 @@ Template.leftside.helpers({
         //var arr=['aaa','cc','ajdjfdj','aaa',12];
         var unique = arr.filter( onlyUnique );
         return unique;
-
     },
-
     getAverage:function(id){
             var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
           console.log("POSSIVE IS: "+positive);

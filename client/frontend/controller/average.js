@@ -7,7 +7,7 @@ Template.details.helpers({
 		console.log("Amount="+result);
 		return result;
 	},
-	average:function(){
+	average:function(){     
 		var id = this._id;
 		var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
 		var countreview = review.find({id_product:id,type:"professional"}).count();
