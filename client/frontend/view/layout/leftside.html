@@ -3,62 +3,16 @@
 		<div class="col-md-4">
 			<div class="left-container">
 				<h1 class="margin-bottom"><b>TOP PERFUME TRENDS</b></h1>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="h1"><i class="fa fa-circle circle-color color-green"></i> 98%</div>
+				{{#each getdata}}
+					<div class="row">
+						<div class="col-md-4">
+							<div class="h1"><i class="fa fa-circle circle-color {{coloraverage _id}}"></i> {{average _id}}%</div>
+						</div>
+						<div class="col-md-8">
+							<div class="h2">{{product_name}}</div>
+						</div>
 					</div>
-					<div class="col-md-8">
-						<div class="h2">Titre perfume trends</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="h1"><i class="fa fa-circle circle-color color-green"></i> 98%</div>
-					</div>
-					<div class="col-md-8">
-						<div class="h2">Titre perfume trends</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="h1"><i class="fa fa-circle circle-color color-orange"></i> 98%</div>
-					</div>
-					<div class="col-md-8">
-						<div class="h2">Titre perfume trends</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="h1"><i class="fa fa-circle circle-color color-green"></i> 98%</div>
-					</div>
-					<div class="col-md-8">
-						<div class="h2">Titre perfume trends</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="h1"><i class="fa fa-circle circle-color color-yellow"></i> 98%</div>
-					</div>
-					<div class="col-md-8">
-						<div class="h2">Titre perfume trends</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="h1"><i class="fa fa-circle circle-color color-green"></i> 98%</div>
-					</div>
-					<div class="col-md-8">
-						<div class="h2">Titre perfume trends</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-4">
-						<div class="h1"><i class="fa fa-circle circle-color color-orange"></i> 98%</div>
-					</div>
-					<div class="col-md-8">
-						<div class="h2">Titre perfume trends</div>
-					</div>
-				</div>
+				{{/each}}
 				<br>
 				<div class="col-md-12">
 					<div class="h1"><a href="Review.html">View All </a></div>

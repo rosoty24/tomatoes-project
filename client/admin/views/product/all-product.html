@@ -17,10 +17,8 @@
                             <thead>
                                 <tr style="background:#ddd">
                                     <th id="text-color">#</th>
-                                    <th id="text-color">Titile</th>
+                                    <th id="text-color">Product Name</th>
                                     <th id="text-color">Categories</th>
-                                    <th id="text-color">Stock</th>
-                                    <th id="text-color">Price</th>
                                     <th id="text-color">Image</th>
                                     <th width="25%" id="text-color">Action</th>
                                 </tr>
@@ -29,11 +27,9 @@
                             {{#each getAllProduct}}
                                 <tr class="odd gradeX">
                                     <td class="text-center">#</td>
-                                    <td class="text-center">{{title}}</td>
+                                    <td class="text-center">{{product_name}}</td>
                                     <td class="text-center">{{getCategory}}</td>
-                                    <td class="text-center">{{stock}}</td>
-                                    <td class="text-center">{{price}}</td>
-                                    <td><img src="/uploads/{{getImage img}}" width="50" class="img-responsive"></td>
+                                    <td><img src="/uploads/{{getImage image}}" width="50" class="img-responsive"></td>
                                     <td class="text-center">
                                         <a href="/productDetail/{{_id}}" class="btn btn-primary btn-xs">View</a>
                                         <a href="#" id="remove" class="btn btn-danger btn-xs">Delete</a>
