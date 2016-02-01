@@ -18,6 +18,9 @@ Template.leftside.helpers({
         	return false;
         }
     },
+    getdata:function(){
+      return data.find({status:1});
+    },
     getreview:function(){
         arr=[];
         function onlyUnique(value, index, self) { 
