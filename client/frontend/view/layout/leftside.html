@@ -3,10 +3,10 @@
 		<div class="col-md-4">
 			<div class="left-container">
 				<h1 class="margin-bottom"><b>TOP PERFUME TRENDS</b></h1>
-				{{#each getdata}}
+				{{#each getProductReview}}
 					<div class="row">
 						<div class="col-md-4">
-							<div class="h1"><i class="fa fa-circle circle-color {{coloraverage _id}}"></i> {{average _id}}%</div>
+							<div class="h1"><i class="fa fa-circle circle-color {{coloraverage _id}}"></i> {{getAverage _id}}%</div>
 						</div>
 						<div class="col-md-8">
 							<div class="h2">{{product_name}}</div>
