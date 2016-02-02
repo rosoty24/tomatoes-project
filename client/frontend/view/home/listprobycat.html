@@ -4,19 +4,15 @@
         <div class="col-md-8">
             <div class="content">
                 <div class="row space-row">
-            
-                <!-- {{#each getDatalist}} -->
                     {{#each getData}}
-                    <div class="col-md-4"> 
-                        <a href="/details/{{_id}}">
-                            <img src="{{image}}" height="70" class="img-responsive center-block">
-                        </a>
-                        <h3 class="space-top">Product Name: {{product_name}}</h3>
-                        <h3 class="">Category: <b>{{getcat}}</b></h3> 
-                    </div>
-                {{/each}}
-            <!-- {{/each}} -->
-                
+                        <div class="col-md-4"> 
+                            <a href="/details/{{_id}}">
+                                <img src="{{image}}" height="70" class="img-responsive center-block">
+                            </a>
+                            <h3 class="text-center space-top">{{product_name}}</h3> 
+                            <h3 class="text-center price">  </h3>
+                        </div>
+                    {{/each}}
                 </div>
             </div>
             {{> pagination}}

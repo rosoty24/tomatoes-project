@@ -3,11 +3,6 @@ Template.listdatabycat.helpers({
         var catId = this.category;
         return category.findOne({_id:catId}).title;
     },
-    // getDatalist: function(){
-    //     var catID = this._id;
-    //     var result = data.find({category:catID});
-    //     return result;
-    // },
        getData:function(){
         var arr=[];
         var query=6;
@@ -24,7 +19,7 @@ Template.listdatabycat.helpers({
         items.forEach(function(value){
             var obj={
                 _id             : value._id,
-                name            : value.name,
+                product_name            : value.product_name,
                 image           : value.image,
                 category        : value.category,
                 perfume_pyramid :value.perfume_pyramid,

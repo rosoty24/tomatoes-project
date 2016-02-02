@@ -17,7 +17,6 @@ Template.disProduct.helpers({
         }
     },
     getFavorite:function(id){
-        //var id = this._id;
         return favorite.find({proId:id}).count();
     }
 });
@@ -118,7 +117,6 @@ Template.details.helpers({
         }
     }
 });
-
 Template.details.events({
      "click #add-review": function(e,tlp){
         e.preventDefault();
@@ -154,7 +152,6 @@ Template.details.events({
                 }
             });
         }
-        
     },
     "click i.fa-3x":function(e){
         e.preventDefault();
