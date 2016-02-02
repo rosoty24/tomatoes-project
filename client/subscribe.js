@@ -2,7 +2,7 @@
 Meteor.subscribe('users');
 Meteor.subscribe("products");
 Meteor.subscribe("images");
-Meteor.subscribe("categories");
+Meteor.subscribe("category");
 Meteor.subscribe("advertise");
 Meteor.subscribe("favorite");
 Meteor.subscribe("review");

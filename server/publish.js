@@ -10,8 +10,8 @@ Meteor.publish('products', function (){
   return products.find({})
 });
 
-Meteor.publish('categories', function (){ 
-  return categories.find({});
+Meteor.publish('category', function (){ 
+  return category.find({});
 });
 
 Meteor.publish('advertise', function (){ 

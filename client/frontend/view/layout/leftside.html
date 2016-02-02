@@ -3,10 +3,10 @@
 		<div class="col-md-4">
 			<div class="left-container">
 				<h1 class="margin-bottom"><b>TOP PERFUME TRENDS</b></h1>
-				{{#each getStatus}}
+				{{#each getProductReview}}
 					<div class="row">
 						<div class="col-md-4">
-							<div class="h1"><i class="fa fa-circle circle-color {{coloraverage _id}}"></i> {{average _id}}%</div>
+							<div class="h1"><i class="fa fa-circle circle-color {{coloraverage _id}}"></i> {{getAverage _id}}%</div>
 						</div>
 						<div class="col-md-8">
 							<div class="h2">{{product_name}}</div>
@@ -21,20 +21,17 @@
 			<div class="left-container">
 				<h1 class="margin-bottom"><b>TOP JUST ARRIVED</b></h1>
 				{{#each getreview}}
-					<!-- {{#each getProductName}} -->
 					<div class="row">
 						<div class="col-md-4">
 							<div class="h1">
-								<i class="fa fa-circle circle-color {{coloraverage}}"></i>{{getAverage this}}%
+								<i class="fa fa-circle circle-color {{checkcolor average}}"></i>{{average}}%
 							</div>
+
 						</div>
 						<div class="col-md-8">
-						<!-- {{#each getProductName}} -->
-							<div class="h2">{{getProductName this}}</div>
-						<!-- {{/each}} -->
+							<div class="h2">{{product_name}}</div>
 						</div>
 					</div>
-					<!-- {{/each}} -->
 				{{/each}}
 				<br>
 				<div class="col-md-12">
@@ -65,10 +62,10 @@
 			<!-- left container -->
 			<div class="left-container">
 				<h1 class="margin-bottom"><b>TOP MEN PERFUME</b></h1>
-				{{#each getData}}
+				{{#each getTopperfume}}
 				<div class="row">
 					<div class="col-md-4">
-						<div class="h1"><i class="fa fa-circle circle-color {{coloraverage2 _id}}"></i>{{getAverage _id}}%</div>
+						<div class="h1"><i class="fa fa-circle circle-color {{checkcolor average}}"></i>{{average}}%</div>
 					</div>
 
 					<div class="col-md-8">
