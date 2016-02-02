@@ -81,17 +81,32 @@ Template.details.helpers({
         }
     },
     checkTime:function(time){
-        var date = new Date(time).toString("yy-mm-dd");
+       var date = new Date(time).toString("yy-mm-dd");
+       var date = new Date(time);
         return date;
     },
-    Review_professional:function(){
+    Review_professional:function(time){
         var id = this._id;
         return review.find({id_product:id,type:"professional"},{limit:6});
     },
     Review_user:function(){
         var id = this._id;
         return review.find({id_product:id,type:"user"},{limit:6});
-    }
+    },
+    getTimeFormat:function(time){
+       var timestamp = time,
+        date = new Date(timestamp * 1000),
+    datevalues = {
+           year:date.getYear(),
+           month:date.getMonth()+1,
+           day:date.getDate(),
+           hour:date.getHours(),
+           Mn:date.getMinutes(),
+           sn:date.getSeconds(),
+        };
+        console.log(datevalues.day+"/"+datevalues.month+"/"+datevalues.year); 
+        return datevalues.day+"/"+datevalues.month+"/"+datevalues.year;
+        }
 });
 
 Template.details.events({
