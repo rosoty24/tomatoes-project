@@ -52,7 +52,8 @@ Template.leftside.helpers({
         var result = (Number(positive)/Number(countreview))*100;
         if(result<60){
             return "color-orange";
-        }else{
+        }
+        else{
             return "color-green";
         }
     },
@@ -73,7 +74,8 @@ Template.leftside.helpers({
         var result = (Number(positive)/Number(countreview))*100;
         if(result<60){
             return "color-orange";
-        }else{
+        }
+        else{
             return "color-green";
         }
     }
