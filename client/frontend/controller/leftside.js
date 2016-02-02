@@ -116,7 +116,8 @@ Template.leftside.helpers({
         }
     },
     checkaverage:function(average){
-        if(average == "undefined" || average < 0)
+        console.log("CHECKAVER="+average);
+        if(average == "NaN")
             return "0";
         else
             return average;

@@ -86,7 +86,7 @@ Template.details.helpers({
         var day = timestamp.getDate();
         var month = timestamp.getMonth();
         var year = timestamp.getFullYear();
-        return day+"/"+month+"/"+year;
+        return day+"-"+month+"-"+year;
     },
     Review_professional:function(){
         var id = this._id;
