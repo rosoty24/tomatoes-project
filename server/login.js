@@ -8,6 +8,6 @@ Meteor.methods({
 	   });
 	   console.log(targetUserId);
 	   //Roles.setUserRoles(id, roleid, 'noolab')
-	   Roles.setUserRoles(targetUserId, [rerole], 'mygroup')
+	   Roles.setUserRoles(targetUserId, [rerole])
 	  }
 });
