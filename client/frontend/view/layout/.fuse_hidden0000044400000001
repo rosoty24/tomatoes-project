@@ -3,19 +3,19 @@
 		<div class="col-md-4">
 			<div class="left-container">
 				<h1 class="margin-bottom"><b>TOP PERFUME TRENDS</b></h1>
-				{{#each getProductReview}}
+				{{#each getProducts}}
 					<div class="row">
 						<div class="col-md-4">
-							<div class="h1"><i class="fa fa-circle circle-color {{coloraverage _id}}"></i> {{getAverage _id}}%</div>
+							<div class="h1"><i class="fa fa-circle circle-color {{coloraverage _id}}"></i> {{average _id}}%</div>
 						</div>
 						<div class="col-md-8">
-							<div class="h2"><a href="/details/{{_id}}">{{product_name}}</a></div>
+							<div class="h2">{{product_name}}</div>
 						</div>
 					</div>
 				{{/each}}
 				<br>
 				<div class="col-md-12">
-					<div class="h1"><a href="/viewStatus">View All </a></div>
+					<div class="h1"><a href="Review.html">View All </a></div>
 				</div>
 			</div><!-- left container -->
 			<div class="left-container">
@@ -24,18 +24,18 @@
 					<div class="row">
 						<div class="col-md-4">
 							<div class="h1">
-								<i class="fa fa-circle circle-color {{checkcolor average}}"></i>{{checkaverage average}}%
+								<i class="fa fa-circle circle-color {{coloraverage}}"></i>{{getAverage this}}%
 							</div>
 
 						</div>
 						<div class="col-md-8">
-							<div class="h2"><a href="/details/{{_id}}">{{product_name}}</a></div>
+							<div class="h2">Titre perfume trends</div>
 						</div>
 					</div>
 				{{/each}}
 				<br>
 				<div class="col-md-12">
-					<div class="h1"><a href="/viewTopReview">View All </a></div>
+					<div class="h1"><a href="Review.html">View All </a></div>
 				</div>
 			</div><!-- left container -->
 			{{#if detial}}
@@ -62,21 +62,21 @@
 			<!-- left container -->
 			<div class="left-container">
 				<h1 class="margin-bottom"><b>TOP MEN PERFUME</b></h1>
-				{{#each getTopperfume}}
+				{{#each getDatas}}
 				<div class="row">
 					<div class="col-md-4">
-						<div class="h1"><i class="fa fa-circle circle-color {{checkcolor average}}"></i>{{average}}%</div>
+						<div class="h1"><i class="fa fa-circle circle-color {{coloraverage _id}}"></i>{{getAverage _id}}%</div>
 					</div>
 
 					<div class="col-md-8">
 					
-						<div class="h2"><a href="/details/{{_id}}">{{product_name}}</a></div>
+						<div class="h2">{{product_name}}</div>
 					</div>
 				</div>
 				{{/each}}
 				<br>
 				<div class="col-md-12">
-					<div class="h1"><a href="/viewTopPerfume">View All </a></div>
+					<div class="h1"><a href="Review.html">View All </a></div>
 				</div>
 			</div><!-- left container -->
 		</div>				

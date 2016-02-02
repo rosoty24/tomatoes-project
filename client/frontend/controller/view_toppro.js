@@ -1,29 +1,11 @@
-Template.leftside.helpers({
-        getproductName:function(id){
-            return data.findOne({_id:id}).product_name;
-        },
-        getProductReview:function(){
+
+Template.viewStatus.helpers({
+    getProductReview:function(){
             return data.find({status:1});
-        },
-        detial:function(){
-          var  str = Router.current().url;
-            var current = str.replace("http://localhost:3000",""); 
-          var arr = current.split("/");
-          var detial = "";
-          if(current){
-               for (var i = arr.length - 1; i >= 0; i--) {
-                if(arr[i] == "details"){
-                  detial=arr[i];  
-                }
-               }   
-            }
-            if (detial == "details") {
-              return true;
-            }else{
-              return false;
-            }
-        },
-        getreview:function(){
+        }
+});
+Template.viewTopReview.helpers({
+    getreview:function(){
             arr=[];
             function onlyUnique(value, index, self) { 
              return self.indexOf(value) === index;
@@ -38,6 +20,7 @@ Template.leftside.helpers({
                 var obj = {
                     "_id" : value._id,
                     "product_name" : value.product_name,
+                    "image":value.image,
                     "average": result
                 }
                 arr.push(obj);
@@ -53,17 +36,9 @@ Template.leftside.helpers({
             var unique = arr.filter( onlyUnique );
             //console.log("UNIQ="+unique);
             return unique;
-        },
-    getAverage:function(id){
-        var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
-        console.log("POSSIVE IS: "+positive);
-        var countreview = review.find({id_product:id,type:"professional"}).count();
-        var result = (Number(positive)/Number(countreview))*100;
-        result = (result.toString()).replace(/(\d+)(\.)(.*)/gi,'$1');
-        console.log("RESULT IS :"+result);
-        return result;  
-         
-    },
+        }
+});
+Template.viewTopPerfume.helpers({
     getTopperfume:function(){
          arr=[];
         function onlyUnique(value, index, self) { 
@@ -82,6 +57,7 @@ Template.leftside.helpers({
                 var obj = {
                     "_id" : value._id,
                     "product_name" : value.product_name,
+                    "image":value.image,
                     "average": result
                 }
                 arr.push(obj);
@@ -97,30 +73,5 @@ Template.leftside.helpers({
             var unique = arr.filter( onlyUnique );
             //console.log("UNIQ="+unique);
             return unique;
-    },
-    coloraverage:function(id){
-        var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
-        var countreview = review.find({id_product:id,type:"professional"}).count();
-        var result = (Number(positive)/Number(countreview))*100;
-        if(result<60){
-            return "color-orange";
-        }else{
-            return "color-green";
-        }
-    },
-    checkcolor:function(average){
-        if(average<60){
-             return "color-orange";
-        }else{
-            return "color-green";
-        }
-    },
-    checkaverage:function(average){
-        console.log("CHECKAVER="+average);
-        if(average == "NaN")
-            return "0";
-        else
-            return average;
     }
-        
 });
