@@ -205,6 +205,15 @@ nav h1 {
     width: 40%;
 }
 
+.center-block{
+  position: relative;
+  width:  150px;
+  height: 150px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+}
+
 /*.main-nav ul.nav > li:nth-child(1) > a {
   border-color:#55acee
 }
