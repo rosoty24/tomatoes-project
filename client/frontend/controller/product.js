@@ -112,6 +112,7 @@ Template.details.helpers({
 Template.details.events({
      "click #add-review": function(e,tlp){
         e.preventDefault();
+        var user = Meteor.userId();
         var today = new Date();
         var date = today.getDate();
         var text = tlp.$('#review').val();
@@ -131,17 +132,19 @@ Template.details.events({
                 url         : url,
                 websiteName : websiteName
         }
-        if(confirm('Are you sure you want to insert???') || userId){
-            Meteor.call('insertReview',object,function(error){
+        if(!user){
+            alert("Login First Before Comment");
+            Router.go("/login");
+         }else if(confirm('Are you sure you want to insert???') || userId){
+             Meteor.call('insertReview',object,function(error){
                 if(error){console.log("ERROR"+error.reason())}
                 else{
                     console.log("SUCCESS");
                     $("#review").val("");
                 }
             });
-        }else{
-            alert("Please login");
         }
+        
     },
     "click i.fa-3x":function(e){
         e.preventDefault();
