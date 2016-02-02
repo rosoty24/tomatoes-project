@@ -81,22 +81,38 @@ Template.details.helpers({
         }
     },
     checkTime:function(time){
-        var date = new Date(time).toString("yy-mm-dd");
+       var date = new Date(time).toString("yy-mm-dd");
+       var date = new Date(time);
         return date;
     },
-    Review_professional:function(){
+    Review_professional:function(time){
         var id = this._id;
         return review.find({id_product:id,type:"professional"},{limit:6});
     },
     Review_user:function(){
         var id = this._id;
         return review.find({id_product:id,type:"user"},{limit:6});
-    }
+    },
+    getTimeFormat:function(time){
+       var timestamp = time,
+        date = new Date(timestamp * 1000),
+    datevalues = {
+           year:date.getYear(),
+           month:date.getMonth()+1,
+           day:date.getDate(),
+           hour:date.getHours(),
+           Mn:date.getMinutes(),
+           sn:date.getSeconds(),
+        };
+        console.log(datevalues.day+"/"+datevalues.month+"/"+datevalues.year); 
+        return datevalues.day+"/"+datevalues.month+"/"+datevalues.year;
+        }
 });
 
 Template.details.events({
      "click #add-review": function(e,tlp){
         e.preventDefault();
+        var user = Meteor.userId();
         var today = new Date();
         var date = today.getDate();
         var text = tlp.$('#review').val();
@@ -116,17 +132,19 @@ Template.details.events({
                 url         : url,
                 websiteName : websiteName
         }
-        if(confirm('Are you sure you want to insert???') || userId){
-            Meteor.call('insertReview',object,function(error){
+        if(!user){
+            alert("Login First Before Comment");
+            Router.go("/login");
+         }else if(confirm('Are you sure you want to insert???') || userId){
+             Meteor.call('insertReview',object,function(error){
                 if(error){console.log("ERROR"+error.reason())}
                 else{
                     console.log("SUCCESS");
                     $("#review").val("");
                 }
             });
-        }else{
-            alert("Please login");
         }
+        
     },
     "click i.fa-3x":function(e){
         e.preventDefault();
