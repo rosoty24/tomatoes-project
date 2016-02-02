@@ -81,8 +81,12 @@ Template.details.helpers({
         }
     },
     checkTime:function(time){
-        var date = new Date(time).toString("yy-mm-dd");
-        return date;
+        //var date = new Date(time).toString("yy-mm-dd");
+        var timestamp = new Date(time);
+        var day = timestamp.getDate();
+        var month = timestamp.getMonth();
+        var year = timestamp.getFullYear();
+        return day+"/"+month+"/"+year;
     },
     Review_professional:function(){
         var id = this._id;

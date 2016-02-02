@@ -114,6 +114,12 @@ Template.leftside.helpers({
         }else{
             return "color-green";
         }
+    },
+    checkaverage:function(average){
+        if(average == "undefined" || average < 0)
+            return "0";
+        else
+            return average;
     }
         
 });
