@@ -109,7 +109,14 @@ Template.details.helpers({
         };
         console.log(datevalues.day+"/"+datevalues.month+"/"+datevalues.year); 
         return datevalues.day+"/"+datevalues.month+"/"+datevalues.year;
+    },
+    coloraverage:function(average){
+        if(average<60){
+            return "color-orange";
+        }else{
+            return "color-green";
         }
+    }
 });
 
 Template.details.events({

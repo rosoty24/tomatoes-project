@@ -12,7 +12,7 @@
 					  <div class="wrapper-in">
 					     <h1 class="h1-bold">PROFESSIONAL CRITICS</h1>
 					     <div class="col-md-5">
-					       <div class="h1"><i class="fa fa-circle fa-2x circle-color {{coloraverage}}"></i> <span class="lg-span">{{average}}%</span>
+					       <div class="h1"><i class="fa fa-circle fa-2x circle-color {{coloraverage average}}"></i> <span class="lg-span">{{average}}%</span>
 					        </div>
 					     </div>
 					     <div class="col-md-7">
@@ -71,8 +71,7 @@
 				    	<div class="box">
 				   	  		<!-- show comment -->
 				   	 		<div class="show-comment"> 
-				   	 			<p>{{text}}</p>
-				   	 			<p>{{checkTime date}}</p>		
+				   	 			<p>{{text}}</p>		
 				   	 		</div>
 				   			<!-- end show comment -->
 				   	 		<div style="float:left">
@@ -81,7 +80,7 @@
 				   	 		<div style="float:left">
 				   	  			<p class="text-name"> {{author}} </p>
 				   	  			
-				   	  			<p class="text-name">Date: {{getTimeFormat date}} </p>
+				   	  			<p class="text-name">Date: {{checkTime date}} </p>
 				   	  		
 				   	  			<a href="{{url}}">
 				   	  				<span class="color-text"> {{websiteName}} </span>
@@ -105,6 +104,7 @@
 					   	  		<!-- show comment -->
 					   	 		<div class="show-comment"> 	
 					   	 			<p>{{text}}</p>
+					   	 			<p>{{checkTime date}}</p>	
 					   	 		</div>
 					   			<!-- end show comment -->
 					    		<div style="float:left">

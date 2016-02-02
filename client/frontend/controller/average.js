@@ -10,17 +10,27 @@ Template.details.helpers({
 	average:function(){     
 		var id = this._id;
 		var positive = review.find({id_product:id,type:"professional",score:{$gte:3}}).count();
-		var countreview = review.find({id_product:id,type:"professional"}).count();
-		var result = (Number(positive)/Number(countreview))*100;
+		if (positive=="") {
+			return 0;
+		}
+		else{
+			var countreview = review.find({id_product:id,type:"professional"}).count();
+			var result = (Number(positive)/Number(countreview))*100;
 			result = (result.toString()).replace(/(\d+)(\.)(.*)/gi,'$1');
-		return result;
+			return result;
+		}
+		
 	},
 	average_rating:function(){
 		var id = this._id;
 		var sum = 0;
 		console.log("ID="+id);
 		var count = review.find({id_product:id,type:"professional"}).count();
-		var result = review.find({id_product:id,type:"professional"});
+		if ( count == "" || count == null ) {
+			return 0;
+		}
+		else{
+			var result = review.find({id_product:id,type:"professional"});
 		result.forEach(function(item){
 			sum = sum + item.score;
 		});
@@ -28,6 +38,7 @@ Template.details.helpers({
 			total = (total.toString()).replace(/(\d+\.\d{2})(.*)/gi,'$1');
 		console.log("SUM="+sum);
 		return total;
+		}	
 	},
 	positive:function(){
 		var id = this._id;
@@ -61,22 +72,32 @@ Template.details.helpers({
 	average_user:function(){
 		var id = this._id;
 		var positive = review.find({id_product:id,type:"user",score:{$gte:3}}).count();
-		var countreview = review.find({id_product:id,type:"user"}).count();
-		var result = (Number(positive)/Number(countreview))*100;
-		return result;
+		if ( positive == "" || positive == null) {
+			return 0;
+		}
+		else{
+			var countreview = review.find({id_product:id,type:"user"}).count();
+			var result = (Number(positive)/Number(countreview))*100;
+			return result;
+		}
 	},
 	averageuser_rating:function(){
 		var id = this._id;
 		var sum = 0;
 		console.log("ID="+id);
 		var count = review.find({id_product:id,type:"user"}).count();
-		var result = review.find({id_product:id,type:"user"});
+		if ( count == "" || count == null ) {
+			return 0;
+		}
+		else{
+			var result = review.find({id_product:id,type:"user"});
 		result.forEach(function(item){
 			sum = sum + item.score;
 		});
 		var total = Number(sum)/Number(count);
 		console.log("SUM="+sum);
 		return total;
+		}
 	},
 	positive_user:function(){
 		var id = this._id;
