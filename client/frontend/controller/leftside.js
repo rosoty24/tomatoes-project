@@ -32,6 +32,7 @@ Template.leftside.helpers({
         });
         //var arr=['aaa','cc','ajdjfdj','aaa',12];
         var unique = arr.filter( onlyUnique );
+        //console.log(" review "+JSON.stringify(unique));
         return unique;
     },
     getAverage:function(id){
@@ -54,6 +55,10 @@ Template.leftside.helpers({
         }else{
             return "color-green";
         }
+    },
+    getProductName:function(id){
+        var product = data.findOne({_id:id});
+        return product.product_name;
     },
     getData:function(){
         var category = categories.findOne({title:"Perfume"});
