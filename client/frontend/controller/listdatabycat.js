@@ -3,6 +3,15 @@ Template.listdatabycat.helpers({
         var catId = this.category;
         return category.findOne({_id:catId}).title;
     },
+    getProductImage:function(image){
+        var img = images.findOne({_id:image});
+        if(img){
+            var path = "/uploads/"
+            return path+img.copies.images.key;
+        }else{
+            return image;
+        }
+    },
        getData:function(){
         var arr=[];
         var query=6;

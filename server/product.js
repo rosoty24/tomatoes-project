@@ -2,43 +2,40 @@ Meteor.methods({
 	updateComment:function(id,object){
 		data.update({_id:id},{$addToSet:{comments:object}});
 	},
-	insertSubmit: function(obj) {
-  		products.insert(obj);
+  	djibu:function(pro_name,image, category,pyramid,accords,ratings,longevity,sillage,peoplevote,recommend){
+        var timestamp = new Date().getTime();
+        var obj = {
+            product_name:pro_name,
+            image:image,
+            category:category,
+            perfume_pyramid:pyramid,
+            accords:accords,
+            ratings:ratings,
+            Longevity:longevity,
+            Sillage:sillage,
+            peoplevote:peoplevote,
+            recommend:recommend,
+            date:timestamp,
+            status:0
+        }
+    	data.insert(obj);
   	},
-  	UpdateSubmit: function(id,obj) {
-  		return data.update({_id:id},{$set:obj});
-  	},
-  	insertLove:function(attr){
-    	feeling.insert(attr);
-  	},
-  	insertLike:function(attr){
-    	feeling.insert(attr);
-  	},
-  	insertDislike:function(attr){
-    	feeling.insert(attr);
-  	},
-  	insertWinter:function(attr){
-    	feeling.insert(attr);
-  	},
-  	insertSpring:function(attr){
-    	feeling.insert(attr);
-  	},
-  	insertSummer:function(attr){
-    	feeling.insert(attr);
-  	},
-  	insertFall:function(attr){
-    	feeling.insert(attr);
-  	},
-  	insertDay:function(attr){
-    	feeling.insert(attr);
-  	},
-  	insertNight:function(attr){
-    	feeling.insert(attr);
-  	},
-    insertStar:function(attr){
-      feeling.insert(attr);
-    },
-    insertDisStar:function(attr){
-      feeling.insert(attr);
+    updateTomatoes:function(id,pro_name,image, category,pyramid,accords,ratings,longevity,sillage,peoplevote,recommend){
+        var timestamp = new Date().getTime();
+        var obj = {
+            product_name:pro_name,
+            image:image,
+            category:category,
+            perfume_pyramid:pyramid,
+            accords:accords,
+            ratings:ratings,
+            Longevity:longevity,
+            Sillage:sillage,
+            peoplevote:peoplevote,
+            recommend:recommend,
+            date:timestamp,
+            status:0
+        }
+        data.update({_id:id},{$set:obj});
     }
 });

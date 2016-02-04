@@ -81,8 +81,9 @@ textarea.form-control-fragrand {
     color: #868786;
 }
 .show-comment{
-    height: 100px;
+    height: auto;
     background: #fffad9;
+    overflow: hidden;
 }
 
 

@@ -115,6 +115,16 @@ Template.details.helpers({
         }else{
             return "color-green";
         }
+    },
+    getProductImage:function(){
+        var image = this.image;
+        var img = images.findOne({_id:image});
+        if(img){
+            var path = "/uploads/"
+            return path+img.copies.images.key;
+        }else{
+            return image;
+        }
     }
 });
 Template.details.events({
